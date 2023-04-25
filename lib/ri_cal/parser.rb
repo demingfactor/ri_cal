@@ -87,7 +87,7 @@ module RiCal
     end
 
     def invalid #:nodoc:
-      raise Exception.new("Invalid icalendar file")
+      raise InvalidIcalendarFileError.new("Invalid icalendar file")
     end
 
     def still_in(component, separated_line) #:nodoc:
@@ -141,5 +141,8 @@ module RiCal
       @parent_stack.pop
       result
     end
+  end
+
+  class InvalidICalendarFile < LoadError 
   end
 end
