@@ -3,5 +3,6 @@ tmp/
 pkg/
 profiles/
 doc/
+working/
 \.DS_Store
 .ackrc
